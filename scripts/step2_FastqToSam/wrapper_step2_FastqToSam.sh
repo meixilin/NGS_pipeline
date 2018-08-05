@@ -7,13 +7,13 @@ individuals_array=(1_ML 2_ML 3_ML 4_ML 5_ML B1_ML B2_ML 1_RM 2_RM 3_RM 4_RM 5_RM
 for i in "${individuals_array[@]}"
 do
 
-$QSUB -N ${i}FastqToSam_08042018 \
+$QSUB -N X${i}FastqToSam_08042018 \
 -l highp,h_rt=05:00:00,h_data=8G \
 -m bea \
--o /u/home/m/meixilin/hoffman_log/${i}FastqToSam_08042018.out.txt
--e /u/home/m/meixilin/hoffman_log/${i}FastqToSam_08042018.err.txt
-
+-o /u/home/m/meixilin/hoffman_log/X${i}FastqToSam_08042018.out.txt \
+-e /u/home/m/meixilin/hoffman_log/X${i}FastqToSam_08042018.err.txt \
 step2_FastqToSam.sh ${i} /u/project/rwayne/meixilin/RW20180719 ../../analyses/step2_FastqToSam
+
 sleep 120
 
 done
