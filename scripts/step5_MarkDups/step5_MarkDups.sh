@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PICARD=/u/home/p/phung428/miniconda2/envs/SexBiased/share/picard-2.9.0-0/picard.jar
+PICARD=/u/home/m/meixilin/miniconda2/envs/NGSProcess/share/picard-2.18.11-0/picard.jar
 
 Individual=$1
 InDir=$2
