@@ -8,7 +8,7 @@ individuals_array=(X1_ML X2_ML)
 for i in "${individuals_array[@]}"
 do
 
-$QSUB -N X${i}MarkAdapters_08042018 \
+$QSUB -N ${i}MarkAdapters_08042018 \
 -l highp,h_rt=01:00:00,h_data=8G \
 -o /u/home/m/meixilin/hoffman_log/${i}MarkAdapters_08042018.out.txt \
 -e /u/home/m/meixilin/hoffman_log/${i}MarkAdapters_08042018.err.txt \
@@ -17,5 +17,4 @@ step3_MarkAdapters.sh ${i} ../../analyses/step2_FastqToSam ../../analyses/step3_
 
 sleep 60
 
-done
 done
