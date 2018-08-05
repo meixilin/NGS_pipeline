@@ -4,7 +4,9 @@ Individual=$1
 FastqDir=$2
 OutDir=$3
 
-source activate NGSProcess
+# . /u/local/Modules/default/init/modules.sh
+# module load anaconda
+source /u/home/m/meixilin/miniconda2/bin/activate NGSProcess
 
 picard FastqToSam \
 FASTQ=${FastqDir}/${Individual}_R1_001.fastq.gz \
@@ -15,4 +17,4 @@ SAMPLE_NAME=X${Individual} \
 LIBRARY_NAME=Lib1 \
 PLATFORM=illumina \
 
-source deactivate
+source /u/home/m/meixilin/miniconda2/bin/deactivate
