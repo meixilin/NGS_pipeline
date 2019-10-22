@@ -2,6 +2,8 @@
 
 # This script is for the autosomes (chr 1 to 38)
 
+# GenotypeGVCFs merges gVCF records that were produced as part of the Best Practices workflow for variant discovery (see Best Practices documentation for more details) using the '-ERC GVCF' or '-ERC BP_RESOLUTION' mode of the HaplotypeCaller, or result from combining such gVCF files using CombineGVCFs. This tool performs the multi-sample joint aggregation step and merges the records together in a sophisticated manner: at each position of the input gVCFs, this tool will combine all spanning records, produce correct genotype likelihoods, re-genotype the newly merged record, and then re-annotate it.
+
 . /u/local/Modules/default/init/modules.sh
 module load java/1.8.0_77
 
